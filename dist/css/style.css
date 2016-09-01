@@ -643,9 +643,6 @@ input[type="submit"]:focus {
      -moz-column-gap: 85px;
           column-gap: 85px;
   font-size: 24px;
-  -webkit-column-width: 377px;
-     -moz-column-width: 377px;
-          column-width: 377px;
   width: 840px;
 }
 .text-example p,
