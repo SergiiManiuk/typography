@@ -9,7 +9,8 @@ var gulp = require ('gulp'),
     reload = browserSync.reload;
 var pathes = {
     build: {
-        css: './dist/css'
+        css: './dist/css',
+        img: './dist/img'
     }
 };
 
@@ -17,6 +18,14 @@ gulp.task('htmlReload', function () {
   return gulp.src('*.html')
     .pipe(reload({stream: true}));
 });
+
+
+gulp.task('img', function () {
+  return gulp.src('./src/img/*.*')
+    .pipe(gulp.dest(pathes.build.img))
+    .pipe(reload({stream: true}));
+});
+
 
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -43,9 +52,22 @@ gulp.task('less', function () {
     .pipe(reload({stream: true}));
 });
 
+
+
+
+
+
+
 gulp.task('watch', ['less', 'browser-sync'],  function() {
   gulp.watch('./src/stylesheets/**/*.less', ['less']);
   gulp.watch('*.html', ['htmlReload']);
+  gulp.watch('./src/img/*.*', ['img']);
 });
 
-gulp.task('default', ['watch', 'browser-sync', 'less', 'htmlReload']);
+gulp.task('default', ['watch', 'browser-sync', 'less', 'htmlReload', 'img']);
+
+
+
+
+
+

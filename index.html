@@ -74,183 +74,84 @@
                 </div>
             </form>
         </div>
-        <h2>Icons list Flexbox</h2>
-        <div class="icons-block">
-            <ul class="icons-list">
-                <li>
-                    <div class="flex-item"><img src="./resources/img/chrome.png" alt="chrome" onerror="this.style.display='none'">
-                        <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
-                    </div>
-                </li>
-                <li>
-                    <div class="flex-item"><img src="./resources/img/firefox.png" alt="firefox" onerror="this.style.display='none'">
-                        <span class="alt-fake firefox">Firefox</span></div>
-                </li>
-                <li>
-                    <div class="flex-item"><img src="./resources/img/opera.png" alt="opera" onerror="this.style.display='none'">
-                        <span class="alt-fake opera">Opera</span></div>
-                </li>
-                <li>
-                    <div class="flex-item"><img src="./resources/img/safari.png" alt="safari" onerror="this.style.display='none'">
-                        <span class="alt-fake safari">Safari</span></div>
-                </li>
-                <li class="last">
-                    <div class="flex-item">
-                        <img src="./resources/img/ie.png" alt="internet explorer" onerror="this.style.display='none'">
-                        <span class="alt-fake ie">Internet<br>Explorer</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <h2>Icons List Float</h2>
-        <div class="icons-block">
-            <ul class="icons-list-fl">
-                <li>
-                    <div class="icon-item"><img src="./resources/img/chrome.png" alt="chrome" onerror="this.style.display='none'">
-                        <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
-                    </div>
-                </li>
-                <li>
-                    <div class="icon-item"><img src="./resources/img/firefox.png" alt="firefox" onerror="this.style.display='none'">
-                        <span class="alt-fake firefox">Firefox</span></div>
-                </li>
-                <li>
-                    <div class="icon-item"><img src="./resources/img/opera.png" alt="opera" onerror="this.style.display='none'">
-                        <span class="alt-fake opera">Opera</span></div>
-                </li>
-                <li>
-                    <div class="icon-item"><img src="./resources/img/safari.png" alt="safari" onerror="this.style.display='none'">
-                        <span class="alt-fake safari">Safari</span></div>
-                </li>
-                <li class="last">
-                    <div class="icon-item">
-                        <img src="./resources/img/ie.png" alt="internet explorer" onerror="this.style.display='none'">
-                        <span class="alt-fake ie">Internet<br>Explorer</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <h2>Icons list without images, custom alt only</h2>
-        <div class="icons-block">
-            <ul class="icons-list">
-                <li>
-                    <div class="flex-item">
-                        <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
-                    </div>
-                </li>
-                <li>
-                    <div class="flex-item">
-                        <span class="alt-fake firefox">Firefox</span></div>
-                </li>
-                <li>
-                    <div class="flex-item">
-                        <span class="alt-fake opera">Opera</span></div>
-                </li>
-                <li>
-                    <div class="flex-item">
-                        <span class="alt-fake safari">Safari</span></div>
-                </li>
-                <li class="last">
-                    <div class="flex-item">
-                        <span class="alt-fake ie">Internet<br>Explorer</span>
-                    </div>
-                </li>
-            </ul>
-            <h2>Icons list with broken images</h2>
-            <p>hide alt attr by popular js snippet</p>
-            <pre>
-
-	onerror="this.style.display='none'"
-        </pre>
+        <fieldset>
+            <legend>List icons browsers (using tag img)</legend>
+            <h2>Flexbox</h2>
             <div class="icons-block">
                 <ul class="icons-list">
                     <li>
-                        <div class="flex-item"><img src="./resources/img/chromew.png" alt="chrome" onerror="this.style.display='none'">
+                        <div class="flex-item">
+                            <img src="./dist/img/chrome.png" alt="chrome">
                             <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
                         </div>
                     </li>
                     <li>
-                        <div class="flex-item"><img src="./resources/img/firefox.png" alt="firefox" onerror="this.style.display='none'">
+                        <div class="flex-item"><img src="./dist/img/firefox.png" alt="firefox">
                             <span class="alt-fake firefox">Firefox</span></div>
                     </li>
                     <li>
-                        <div class="flex-item"><img src="./resources/img/operda.png" alt="opera" onerror="this.style.display='none'">
+                        <div class="flex-item"><img src="./dist/img/opera.png" alt="opera">
                             <span class="alt-fake opera">Opera</span></div>
                     </li>
                     <li>
-                        <div class="flex-item"><img src="./resources/img/safari.png" alt="safari" onerror="this.style.display='none'">
+                        <div class="flex-item"><img src="./dist/img/safari.png" alt="safari">
                             <span class="alt-fake safari">Safari</span></div>
                     </li>
                     <li class="last">
-                        <div class="flex-item">
-                            <img src="./resources/img/iee.png" alt="internet explorer" onerror="this.style.display='none'">
+                        <div class="flex-item"><img src="./dist/img/ie.png" alt="ie">
                             <span class="alt-fake ie">Internet<br>Explorer</span>
                         </div>
                     </li>
                 </ul>
             </div>
-            <p>or js cycle, if we have very much images</p>
-            <pre>
-
-  var img = document.getElementsByClassName('hidejs');
-  for (var i = 0; i < img.length; i++) {
-      img[i].onerror = function() {
-          this.style.display = "none"
-      }
-  }
-
-</pre>
-
-
-<h2>Icons List Float Broken</h2>
-        <div class="icons-block">
-            <ul class="icons-list-fl">
-                <li>
-                    <div class="icon-item"><img src="./resources/img/chrome.png" alt="chrome" onerror="this.style.display='none'">
-                        <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
-                    </div>
-                </li>
-                <li>
-                    <div class="icon-item"><img src="./resources/img/firedfox.png" alt="firefox" onerror="this.style.display='none'">
-                        <span class="alt-fake firefox">Firefox</span></div>
-                </li>
-                <li>
-                    <div class="icon-item"><img src="./resources/img/ope.png" alt="opera" onerror="this.style.display='none'">
-                        <span class="alt-fake opera">Opera</span></div>
-                </li>
-                <li>
-                    <div class="icon-item"><img src="./resources/img/safari.png" alt="safari" onerror="this.style.display='none'">
-                        <span class="alt-fake safari">Safari</span></div>
-                </li>
-                <li class="last">
-                    <div class="icon-item">
-                        <img src="./resources/img/ie.png" alt="internet explorer" onerror="this.style.display='none'">
-                        <span class="alt-fake ie">Internet<br>Explorer</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-
-
-<h2>Icons List Flex Box Broken</h2>
+            <h2>Float</h2>
+            <div class="icons-block">
+                <ul class="icons-list-fl">
+                    <li>
+                        <div class="icon-item"><img src="./dist/img/chrome.png" alt="chrome">
+                            <span class="alt-fake chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <img src="./dist/img/firefox.png" alt="firefox">
+                            <span class="alt-fake firefox">Firefox</span></div>
+                    </li>
+                    <li>
+                        <div class="icon-item"><img alt="opera" src="./dist/img/opera.png">
+                            <span class="alt-fake opera">Opera</span></div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <img src="./dist/img/safari.png" alt="safari">
+                            <span class="alt-fake safari">Safari</span></div>
+                    </li>
+                    <li class="last">
+                        <div class="icon-item">
+                            <img src="./dist/img/ie.png" alt="internet explorer">
+                            <span class="alt-fake ie">Internet<br>Explorer</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <h2>Without images</h2>
             <div class="icons-block">
                 <ul class="icons-list">
                     <li>
-                        <div class="flex-item"><img src="./resources/img/cdhrome.png" alt="chrome" class="hidejs">
+                        <div class="flex-item">
                             <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
                         </div>
                     </li>
                     <li>
-                        <div class="flex-item"><img src="./resources/img/firefoxxx.png" alt="firefox" class="hidejs">
+                        <div class="flex-item">
                             <span class="alt-fake firefox">Firefox</span></div>
                     </li>
                     <li>
-                        <div class="flex-item"><img src="./resources/img/opera.png" alt="opera" class="hidejs">
+                        <div class="flex-item">
                             <span class="alt-fake opera">Opera</span></div>
                     </li>
                     <li>
-                        <div class="flex-item"><img src="./resources/img/safariii.png" alt="safari" class="hidejs">
+                        <div class="flex-item">
                             <span class="alt-fake safari">Safari</span></div>
                     </li>
                     <li class="last">
@@ -259,38 +160,157 @@
                         </div>
                     </li>
                 </ul>
+                <h2>Broken source</h2>
+                <div class="icons-block">
+                    <ul class="icons-list-fl">
+                        <li>
+                            <div class="icon-item"><img src="./dist/img/cherome.png" alt="chrome">
+                                <span class="alt-fake chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-item">
+                                <img src="./dist/img/firefox.png" alt="firefox">
+                                <span class="alt-fake firefox">Firefox</span></div>
+                        </li>
+                        <li>
+                            <div class="icon-item"><img alt="opera" src="./dist/img/opea.png">
+                                <span class="alt-fake opera">Opera</span></div>
+                        </li>
+                        <li>
+                            <div class="icon-item">
+                                <img src="./dist/img/safari.png" alt="safari">
+                                <span class="alt-fake safari">Safari</span></div>
+                        </li>
+                        <li class="last">
+                            <div class="icon-item">
+                                <img src="./dist/img/ie.png" alt="internet explorer">
+                                <span class="alt-fake ie">Internet<br>Explorer</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>List icons browsers (using tag object)</legend>
+            <h2>Float</h2>
+            <div class="icons-block">
+                <ul class="icons-list-fl">
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/chrome.png" type="image/png"></object>
+                            <span class="alt-fake chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/firefox.png" type="image/png"></object>
+                            <span class="alt-fake firefox">Firefox</span></div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/opera.png" type="image/png"></object>
+                            <span class="alt-fake opera">Opera</span></div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/safari.png" type="image/png"></object>
+                            <span class="alt-fake safari">Safari</span></div>
+                    </li>
+                    <li class="last">
+                        <div class="icon-item">
+                            <object data="./dist/img/ie.png" type="image/png"></object>
+                            <span class="alt-fake ie">Internet<br>Explorer</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
-
+            <h2>Broken</h2>
+            <div class="icons-block">
+                <ul class="icons-list">
+                    <li>
+                        <div class="flex-item">
+                            <object data="./dist/img/chrome.png" type="image/png"></object>
+                            <span class="chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex-item"><object data="./dist/img/firfox.png" type="image/png"></object>
+                            <span class="alt-fake firefox">Firefox</span></div>
+                    </li>
+                    <li>
+                        <div class="flex-item"><object data="./dist/img/opera.png" type="image/png"></object>
+                            <span class="alt-fake opera">Opera</span></div>
+                    </li>
+                    <li>
+                        <div class="flex-item"><object data="./dist/img/saari.png" type="image/png"></object>
+                            <span class="alt-fake safari">Safari</span></div>
+                    </li>
+                    <li class="last">
+                        <div class="flex-item"><object data="./dist/img/ie.png" type="image/png"></object>
+                            <span class="alt-fake ie">Internet<br>Explorer</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="icons-block">
+                <ul class="icons-list-fl">
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/chrdome.png" type="image/png"></object>
+                            <span class="alt-fake chrome-colors"><span class="chrome-color-1">Ch</span><span class="chrome-color-2">ro</span><span class="chrome-color-3">me</span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/firefox.png" type="image/png"></object>
+                            <span class="alt-fake firefox">Firefox</span></div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/odpera.png" type="image/png"></object>
+                            <span class="alt-fake opera">Opera</span></div>
+                    </li>
+                    <li>
+                        <div class="icon-item">
+                            <object data="./dist/img/safari.png" type="image/png"></object>
+                            <span class="alt-fake safari">Safari</span></div>
+                    </li>
+                    <li class="last">
+                        <div class="icon-item">
+                            <object data="./dist/img/ie.png" type="image/png"></object>
+                            <span class="alt-fake ie">Internet<br>Explorer</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
         <div class="text-example-block">
-        <h3>Тема: &#171;Сюжетный анапест: <br> основные моменты&#187;</h3>
-        <div class="text-example">          
-            <p>Нельзя восстановить истинной хронологической последовательности событий, потому что мелькание мыслей параллельно. Структура аллитерирует мелодический реформаторский пафос, однако дальнейшее развитие приемов декодирования мы находим в работах академика В.Виноградова. Аллюзия наблюдаема. Аллитерация, как бы это ни казалось парадоксальным, параллельна. Мифопорождающее текстовое устройство прочно вызывает эпитет, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана.</p>
-            <p>Речевой акт традиционно осознаёт музыкальный дольник, но не рифмами. Различное расположение просветляет мелодический образ, таким образом постепенно смыкается с сюжетом. Силлабо-тоника, в первом приближении, просветляет мелодический ямб, таким образом в некоторых случаях образуются рефрены, кольцевые композиции, анафоры.</p>
-            <p>Представленный лексико-семантический анализ является психолингвистическим в своей основе, но мифопорождающее текстовое устройство аллитерирует мифологический генезис свободного стиха, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания.</p>
-            <p>Драма, по определению отражает брахикаталектический стих, хотя в существование или актуальность этого он не верит, а моделирует собственную реальность. Лексика осознаёт литературный палимпсест, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания.</p>
-            <ul>
-                <li>Курит ли трупка мой</li>
-                <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                <li><span class="list-style-bottom">Или мой кофе пил</span></li>
-                <li>Lorem ipsum dolor sit amet.</li>
-            </ul>
+            <h3>Тема: &#171;Сюжетный анапест: <br> основные моменты&#187;</h3>
+            <div class="text-example">
+                <p>Нельзя восстановить истинной хронологической последовательности событий, потому что мелькание мыслей параллельно. Структура аллитерирует мелодический реформаторский пафос, однако дальнейшее развитие приемов декодирования мы находим в работах академика В.Виноградова. Аллюзия наблюдаема. Аллитерация, как бы это ни казалось парадоксальным, параллельна. Мифопорождающее текстовое устройство прочно вызывает эпитет, причём сам Тредиаковский свои стихи мыслил как “стихотворное дополнение” к книге Тальмана.</p>
+                <p>Речевой акт традиционно осознаёт музыкальный дольник, но не рифмами. Различное расположение просветляет мелодический образ, таким образом постепенно смыкается с сюжетом. Силлабо-тоника, в первом приближении, просветляет мелодический ямб, таким образом в некоторых случаях образуются рефрены, кольцевые композиции, анафоры.</p>
+                <p>Представленный лексико-семантический анализ является психолингвистическим в своей основе, но мифопорождающее текстовое устройство аллитерирует мифологический генезис свободного стиха, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания.</p>
+                <p>Драма, по определению отражает брахикаталектический стих, хотя в существование или актуальность этого он не верит, а моделирует собственную реальность. Лексика осознаёт литературный палимпсест, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания.</p>
+                <ul>
+                    <li>Курит ли трупка мой</li>
+                    <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                    <li><span class="list-style-bottom">Или мой кофе пил</span></li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </div>
         </div>
-
-    </div>
-
-
-
         </div>
         <br>
         <br>
         <br>
         <script>
-        var img = document.getElementsByClassName('hidejs');
-        for (var i = 0; i < img.length; i++) {
-            img[i].onerror = function() {
-                this.style.display = "none"
-            }
-        }
+        // var img = document.getElementsByClassName('hidejs');
+        // for (var i = 0; i < img.length; i++) {
+        //     img[i].onerror = function() {
+        //         this.style.display = "none"
+        //     }
+        // }
         </script>
         <br>
         <br>

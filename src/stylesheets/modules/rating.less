@@ -25,7 +25,7 @@ only screen and ( min-resolution: 2dppx) ";
         & + label {
             .gradient(@radio-default-top, @radio-default-bottom);
             -webkit-background-clip: text;
-			     -webkit-text-fill-color: transparent;
+			-webkit-text-fill-color: transparent;
             font-weight: bold;
             font-family: arial;
             color: transparent;
@@ -33,16 +33,7 @@ only screen and ( min-resolution: 2dppx) ";
             @media @retina {
             	font-size: 23px;
             }
-            &:hover {
-                .gradient(@radio-active-top, @radio-active-bottom);
-                -webkit-background-clip: text;
-                & ~ label {
-                    .gradient(@radio-active-top, @radio-active-bottom);
-                    -webkit-background-clip: text;
-                }
-            }
         }
-
         &:checked {
             & ~ label {
                 .gradient(@radio-active-top, @radio-active-bottom);
@@ -50,44 +41,40 @@ only screen and ( min-resolution: 2dppx) ";
             }
         }
     }
+    &:hover input:checked ~ label  {
+        .gradient(@radio-default-top, @radio-default-bottom);
+        -webkit-background-clip: text;
+    }
+    &:hover input + label:hover,
+    &:hover label:hover ~ label {
+        .gradient(@radio-active-top, @radio-active-bottom);
+        -webkit-background-clip: text;
+    }
 }
 
-@radio-bg-default: url("../../../resources/img/spr-rating.png") -18px 0 no-repeat;
-@radio-bg-active: url("../../../resources/img/spr-rating.png") 0 0 no-repeat;
-@radio-bg-default-retina: url("../../../resources/img/spr-rating@2X.png") -20px 0 no-repeat;
-@radio-bg-active-retina: url("../../../resources/img/spr-rating@2X.png") 0 0 no-repeat;
+@radio-bg-default: url("../img/spr-rating.png") -18px 0 no-repeat;
+@radio-bg-active: url("../img/spr-rating.png") 0 0 no-repeat;
+@radio-bg-default-retina: url("../img/spr-rating@2X.png") -20px 0 no-repeat;
+@radio-bg-active-retina: url("../img/spr-rating@2X.png") 0 0 no-repeat;
 
 // Radio Block with png background
+
 
 .rating-block-bg-png {
     direction: rtl;
     display: inline-block;
     font-size: 0;
-    input[type="radio"] {
+    input {
         display: none;
         & + label {
             background: @radio-bg-default;
+            @media @retina {
+                background: @radio-bg-default-retina;
+            }
             width: 16px;
             height: 16px;
             display: inline-block;
             margin-right: 5px;
-            @media @retina {
-                background: @radio-bg-default-retina;
-                width: 18px;
-                height: 18px;
-            }
-            &:hover {
-                background: @radio-bg-active;
-                @media @retina {
-                    background: @radio-bg-active-retina;
-                }
-                & ~ label {
-                    background: @radio-bg-active;
-                    @media @retina {
-                        background: @radio-bg-active-retina;
-                    }
-                }
-            }
         }
         &:checked {
             & ~ label {
@@ -96,6 +83,19 @@ only screen and ( min-resolution: 2dppx) ";
                     background: @radio-bg-active-retina;
                 }
             }
+        }
+    }
+    &:hover input:checked ~ label  {
+        background: @radio-bg-default;
+        @media @retina {
+            background: @radio-bg-default-retina;
+        }
+    }
+    &:hover input + label:hover,
+    &:hover label:hover ~ label {
+        background: @radio-bg-active;
+        @media @retina {
+            background: @radio-bg-active-retina;
         }
     }
 }

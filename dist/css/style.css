@@ -447,23 +447,24 @@ only screen and ( min-resolution: 2dppx)  {
     font-size: 23px;
   }
 }
-.rating-block input[type="radio"] + label:hover {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #ff8100), to(#fae905));
-  background: -webkit-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
-  background: -moz-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
-  background: -o-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
-  background: linear-gradient(to top, #ff8100 5%, #fae905 100%);
-  -webkit-background-clip: text;
-}
-.rating-block input[type="radio"] + label:hover ~ label {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #ff8100), to(#fae905));
-  background: -webkit-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
-  background: -moz-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
-  background: -o-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
-  background: linear-gradient(to top, #ff8100 5%, #fae905 100%);
-  -webkit-background-clip: text;
-}
 .rating-block input[type="radio"]:checked ~ label {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #ff8100), to(#fae905));
+  background: -webkit-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
+  background: -moz-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
+  background: -o-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
+  background: linear-gradient(to top, #ff8100 5%, #fae905 100%);
+  -webkit-background-clip: text;
+}
+.rating-block:hover input:checked ~ label {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #5d5d5d), to(#ededed));
+  background: -webkit-linear-gradient(bottom, #5d5d5d 5%, #ededed 100%);
+  background: -moz-linear-gradient(bottom, #5d5d5d 5%, #ededed 100%);
+  background: -o-linear-gradient(bottom, #5d5d5d 5%, #ededed 100%);
+  background: linear-gradient(to top, #5d5d5d 5%, #ededed 100%);
+  -webkit-background-clip: text;
+}
+.rating-block:hover input + label:hover,
+.rating-block:hover label:hover ~ label {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, #ff8100), to(#fae905));
   background: -webkit-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
   background: -moz-linear-gradient(bottom, #ff8100 5%, #fae905 100%);
@@ -476,11 +477,11 @@ only screen and ( min-resolution: 2dppx)  {
   display: inline-block;
   font-size: 0;
 }
-.rating-block-bg-png input[type="radio"] {
+.rating-block-bg-png input {
   display: none;
 }
-.rating-block-bg-png input[type="radio"] + label {
-  background: url("../../../resources/img/spr-rating.png") -18px 0 no-repeat;
+.rating-block-bg-png input + label {
+  background: url("../img/spr-rating.png") -18px 0 no-repeat;
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -493,14 +494,12 @@ only screen and ( min-device-pixel-ratio: 2),
 only screen and ( -webkit-min-device-pixel-ratio: 2),
 only screen and ( min-resolution: 192dpi),
 only screen and ( min-resolution: 2dppx)  {
-  .rating-block-bg-png input[type="radio"] + label {
-    background: url("../../../resources/img/spr-rating@2X.png") -20px 0 no-repeat;
-    width: 18px;
-    height: 18px;
+  .rating-block-bg-png input + label {
+    background: url("../img/spr-rating@2X.png") -20px 0 no-repeat;
   }
 }
-.rating-block-bg-png input[type="radio"] + label:hover {
-  background: url("../../../resources/img/spr-rating.png") 0 0 no-repeat;
+.rating-block-bg-png input:checked ~ label {
+  background: url("../img/spr-rating.png") 0 0 no-repeat;
 }
 @media  
 only screen and (-webkit-min-device-pixel-ratio: 2)),
@@ -509,12 +508,12 @@ only screen and ( min-device-pixel-ratio: 2),
 only screen and ( -webkit-min-device-pixel-ratio: 2),
 only screen and ( min-resolution: 192dpi),
 only screen and ( min-resolution: 2dppx)  {
-  .rating-block-bg-png input[type="radio"] + label:hover {
-    background: url("../../../resources/img/spr-rating@2X.png") 0 0 no-repeat;
+  .rating-block-bg-png input:checked ~ label {
+    background: url("../img/spr-rating@2X.png") 0 0 no-repeat;
   }
 }
-.rating-block-bg-png input[type="radio"] + label:hover ~ label {
-  background: url("../../../resources/img/spr-rating.png") 0 0 no-repeat;
+.rating-block-bg-png:hover input:checked ~ label {
+  background: url("../img/spr-rating.png") -18px 0 no-repeat;
 }
 @media  
 only screen and (-webkit-min-device-pixel-ratio: 2)),
@@ -523,12 +522,13 @@ only screen and ( min-device-pixel-ratio: 2),
 only screen and ( -webkit-min-device-pixel-ratio: 2),
 only screen and ( min-resolution: 192dpi),
 only screen and ( min-resolution: 2dppx)  {
-  .rating-block-bg-png input[type="radio"] + label:hover ~ label {
-    background: url("../../../resources/img/spr-rating@2X.png") 0 0 no-repeat;
+  .rating-block-bg-png:hover input:checked ~ label {
+    background: url("../img/spr-rating@2X.png") -20px 0 no-repeat;
   }
 }
-.rating-block-bg-png input[type="radio"]:checked ~ label {
-  background: url("../../../resources/img/spr-rating.png") 0 0 no-repeat;
+.rating-block-bg-png:hover input + label:hover,
+.rating-block-bg-png:hover label:hover ~ label {
+  background: url("../img/spr-rating.png") 0 0 no-repeat;
 }
 @media  
 only screen and (-webkit-min-device-pixel-ratio: 2)),
@@ -537,8 +537,9 @@ only screen and ( min-device-pixel-ratio: 2),
 only screen and ( -webkit-min-device-pixel-ratio: 2),
 only screen and ( min-resolution: 192dpi),
 only screen and ( min-resolution: 2dppx)  {
-  .rating-block-bg-png input[type="radio"]:checked ~ label {
-    background: url("../../../resources/img/spr-rating@2X.png") 0 0 no-repeat;
+  .rating-block-bg-png:hover input + label:hover,
+  .rating-block-bg-png:hover label:hover ~ label {
+    background: url("../img/spr-rating@2X.png") 0 0 no-repeat;
   }
 }
 .proress-bar-block {
@@ -684,6 +685,16 @@ input[type="submit"]:focus {
 .icons-block {
   margin: 10px 0;
 }
+fieldset {
+  padding: 20px;
+  border: 2px solid #ebebeb;
+}
+legend {
+  font-size: 1.1em;
+  margin: 5px;
+  padding: 10px;
+  font-weight: 500;
+}
 .icons-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -717,6 +728,7 @@ input[type="submit"]:focus {
   height: inherit;
   text-align: center;
   width: 125px;
+  overflow: hidden;
   position: relative;
 }
 .icons-list li .flex-item::after {
@@ -744,6 +756,9 @@ input[type="submit"]:focus {
 }
 .icons-list li img {
   vertical-align: bottom;
+  text-indent: -999px;
+  color: transparent;
+  display: inline-block;
 }
 .icons-list li .chrome-colors {
   display: inline-block;
@@ -778,6 +793,7 @@ input[type="submit"]:focus {
   height: 125px;
   width: 125px;
   float: left;
+  display: block;
   overflow: hidden;
 }
 .icons-list-fl li span {
@@ -803,9 +819,9 @@ input[type="submit"]:focus {
   float: right;
 }
 .icons-list-fl li img {
-  vertical-align: bottom;
-}
-.icons-list-fl li .chrome-colors {
+  vertical-align: middle;
+  text-indent: -999px;
+  color: transparent;
   display: inline-block;
 }
 .icons-list-fl li .chrome-color-1 {
