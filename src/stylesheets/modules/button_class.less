@@ -1,0 +1,42 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    &:focus {
+        outline: none;
+    }
+}
+
+.super-btn {
+    background: linear-gradient(to top, rgba(226, 226, 226, 1) 0%, rgba(226, 226, 226, 1) 30%, rgba(242, 242, 242, 1) 70%, rgba(242, 242, 242, 1) 100%);
+    display: inline-block;
+    padding: 5px 10px;
+    vertical-align: text-bottom;
+    color: #000;
+    line-height: 1;
+    text-decoration: none;
+    border: 1px solid #cdcdcd;
+    border-radius: 6px;
+    position: relative;
+    font-family: "verdana", sans-serif;
+    font-size: 1em;
+    -webkit-appearance: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    &:hover {
+        opacity: .9;
+    }
+    &:active {
+        top: 2px;
+    }
+}
+
+.form {
+    font-size: 14px;
+    label {
+        display: block;
+    }
+    .row {
+        margin-bottom: 10px;
+    }
+}

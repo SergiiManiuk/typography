@@ -1,0 +1,129 @@
+.icons-block {
+    margin: 10px 0;
+}
+
+.icons-list {
+    display: flex;
+    li {
+        flex: 0 1 125px;
+        height: 125px;
+        overflow: hidden;
+        justify-content: center;
+        display: flex;
+        span {
+            font-size: 14px;
+        }
+        .flex-item {
+            height: inherit;
+            text-align: center;
+            width: 125px;
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+        .alt-fake {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px;
+        }
+        &.last {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        img {
+            vertical-align: bottom;
+        }
+        .chrome-colors {
+            display: inline-block;
+        }
+        .chrome-color-1 {
+            color: #17961f;
+        }
+        .chrome-color-2 {
+            color: #c60000;
+        }
+        .chrome-color-3 {
+            color: #e8cc45;
+        }
+        .firefox {
+            color: #ef9f14;
+        }
+        .opera {
+            color: #d41212;
+        }
+        .safari {
+            color: #767676;
+        }
+        .ie {
+            color: #0164bb;
+        }
+    }
+}
+
+
+.icons-list-fl {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    li {
+        height: 125px;
+        width: 125px;
+        float: left;
+        overflow: hidden;
+        span {
+            font-size: 14px;
+        }
+        .icon-item {
+            height: inherit;
+            text-align: center;
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+        }
+        .alt-fake {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px;
+        }
+        &.last {
+            float: right;
+        }
+        img {
+            vertical-align: bottom;
+        }
+        .chrome-colors {
+            display: inline-block;
+        }
+        .chrome-color-1 {
+            color: #17961f;
+        }
+        .chrome-color-2 {
+            color: #c60000;
+        }
+        .chrome-color-3 {
+            color: #e8cc45;
+        }
+        .firefox {
+            color: #ef9f14;
+        }
+        .opera {
+            color: #d41212;
+        }
+        .safari {
+            color: #767676;
+        }
+        .ie {
+            color: #0164bb;
+        }
+    }
+}

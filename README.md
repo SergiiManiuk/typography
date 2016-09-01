@@ -1,0 +1,1 @@
+Astound Commerce sample page

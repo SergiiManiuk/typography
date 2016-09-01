@@ -1,0 +1,101 @@
+/* Mixin */
+
+@radio-default-top: #ededed;
+@radio-default-bottom: #5d5d5d;
+@radio-active-top: #fae905;
+@radio-active-bottom: #ff8100;
+.gradient(@baseColorTop: @radio-default-top, @baseColorBottom: @radio-default-bottom, @position: to top) {
+    background: linear-gradient( @position, @baseColorBottom 5%, @baseColorTop 100%)
+}
+@retina: ~" 
+only screen and (-webkit-min-device-pixel-ratio: 2)),
+only screen and ( -o-min-device-pixel-ratio: 2/1),
+only screen and ( min-device-pixel-ratio: 2),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx) ";
+
+/* Rating Block CSS3 with webkit-background-clip and html character star */
+
+.rating-block {
+    direction: rtl;
+    display: inline-block;
+    font-size: 0;
+    input[type="radio"] {
+        display: none;
+        & + label {
+            .gradient(@radio-default-top, @radio-default-bottom);
+            -webkit-background-clip: text;
+			     -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-family: arial;
+            color: transparent;
+            font-size: 23px;
+            @media @retina {
+            	font-size: 23px;
+            }
+            &:hover {
+                .gradient(@radio-active-top, @radio-active-bottom);
+                -webkit-background-clip: text;
+                & ~ label {
+                    .gradient(@radio-active-top, @radio-active-bottom);
+                    -webkit-background-clip: text;
+                }
+            }
+        }
+
+        &:checked {
+            & ~ label {
+                .gradient(@radio-active-top, @radio-active-bottom);
+                -webkit-background-clip: text;
+            }
+        }
+    }
+}
+
+@radio-bg-default: url("../../../resources/img/spr-rating.png") -18px 0 no-repeat;
+@radio-bg-active: url("../../../resources/img/spr-rating.png") 0 0 no-repeat;
+@radio-bg-default-retina: url("../../../resources/img/spr-rating@2X.png") -20px 0 no-repeat;
+@radio-bg-active-retina: url("../../../resources/img/spr-rating@2X.png") 0 0 no-repeat;
+
+// Radio Block with png background
+
+.rating-block-bg-png {
+    direction: rtl;
+    display: inline-block;
+    font-size: 0;
+    input[type="radio"] {
+        display: none;
+        & + label {
+            background: @radio-bg-default;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+            @media @retina {
+                background: @radio-bg-default-retina;
+                width: 18px;
+                height: 18px;
+            }
+            &:hover {
+                background: @radio-bg-active;
+                @media @retina {
+                    background: @radio-bg-active-retina;
+                }
+                & ~ label {
+                    background: @radio-bg-active;
+                    @media @retina {
+                        background: @radio-bg-active-retina;
+                    }
+                }
+            }
+        }
+        &:checked {
+            & ~ label {
+                background: @radio-bg-active;
+                @media @retina {
+                    background: @radio-bg-active-retina;
+                }
+            }
+        }
+    }
+}

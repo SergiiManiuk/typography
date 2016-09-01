@@ -1,0 +1,33 @@
+.proress-bar-block {
+    position: relative;
+}
+
+.progress-bar {
+    height: 14px;
+    width: 210px;
+    position: relative;
+    background: #fff;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.29);
+    border-radius: 6px;
+}
+
+.progress-bar-data-slider {
+    height: 100%;
+    background-image: linear-gradient( to top, rgb(40, 191, 20) 0%, rgb(139, 218, 26) 14%, rgb(40, 191, 20) 49%, rgb(171, 255, 88) 100%);
+    border-radius: 1em;
+    font-size: 12px;
+    color: #000;
+    font-family: arial;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: center;
+    &::before {
+        content: attr(data-progress-width);
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        text-align: center;
+    }
+}
