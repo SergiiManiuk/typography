@@ -1,1 +1,1 @@
-Astound Commerce sample page
+Typography examples
